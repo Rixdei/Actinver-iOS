@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  Actinver_iOS
+//
+//  Created by David on 11/08/15.
+//  Copyright (c) 2015 Sellcom Solutions. All rights reserved.
+//
+
+
+#define QB_RTC_SAMPLE_MODE 0
+
+#if (QB_RTC_SAMPLE_MODE == 0)
+#define QB_VERSION_STR @"release"
+
+#elif (QB_RTC_SAMPLE_MODE == 1)
+#define QB_VERSION_STR @"dev"
+
+#elif (QB_RTC_SAMPLE_MODE == 2)
+#define QB_VERSION_STR @"qa"
+
+#elif (QB_RTC_SAMPLE_MODE == 3)
+#define QB_VERSION_STR @"android"
+
+#endif
+#ifndef Actinver_iOS_PrefixHeader_pch
+
+
+
+
+#define Actinver_iOS_PrefixHeader_pch
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Quickblox/Quickblox.h>
+#import <QuickbloxWebRTC/QuickbloxWebRTC.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

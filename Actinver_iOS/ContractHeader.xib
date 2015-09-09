@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContractHeader">
+            <connections>
+                <outlet property="txt_contract_balance" destination="no8-zd-ukt" id="5Wq-9x-WhY"/>
+                <outlet property="txt_contract_name" destination="sxG-3R-7ER" id="Zfj-8L-79D"/>
+                <outlet property="txt_contract_type" destination="ihI-fg-8eF" id="4nv-bs-xru"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo Disponible cuenta eje $1.178.097,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no8-zd-ukt">
+                    <rect key="frame" x="10" y="292" width="580" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrato SinAlias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxG-3R-7ER">
+                    <rect key="frame" x="10" y="267" width="129" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" red="0.90588235289999997" green="0.79607843140000001" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihI-fg-8eF">
+                    <rect key="frame" x="10" y="313" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.90588235289999997" green="0.79607843140000001" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="no8-zd-ukt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="0Ci-fu-C8d"/>
+                <constraint firstAttribute="centerY" secondItem="no8-zd-ukt" secondAttribute="centerY" id="LEG-CN-fuh"/>
+                <constraint firstItem="sxG-3R-7ER" firstAttribute="leading" secondItem="no8-zd-ukt" secondAttribute="leading" id="iw3-09-YXe"/>
+                <constraint firstItem="ihI-fg-8eF" firstAttribute="leading" secondItem="no8-zd-ukt" secondAttribute="leading" id="kCG-UJ-Pgp"/>
+                <constraint firstItem="ihI-fg-8eF" firstAttribute="top" secondItem="no8-zd-ukt" secondAttribute="bottom" constant="5" id="lPW-1J-E6m"/>
+                <constraint firstItem="no8-zd-ukt" firstAttribute="top" secondItem="sxG-3R-7ER" secondAttribute="bottom" constant="5" id="rdP-Y7-VhY"/>
+                <constraint firstAttribute="trailing" secondItem="no8-zd-ukt" secondAttribute="trailing" constant="10" id="yae-xO-h8s"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

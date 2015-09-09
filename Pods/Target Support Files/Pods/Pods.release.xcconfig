@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Quickblox-WebRTC"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MMDrawerController" "${PODS_ROOT}/Headers/Public/MMDrawerController+Storyboard" "${PODS_ROOT}/Headers/Public/Quickblox-WebRTC" "${PODS_ROOT}/Headers/Public/Quickblox-WebRTC/QuickbloxWebRTC"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MMDrawerController" -isystem "${PODS_ROOT}/Headers/Public/MMDrawerController+Storyboard" -isystem "${PODS_ROOT}/Headers/Public/Quickblox-WebRTC" -isystem "${PODS_ROOT}/Headers/Public/Quickblox-WebRTC/QuickbloxWebRTC"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"MMDrawerController" -l"MMDrawerController+Storyboard" -framework "QuartzCore" -framework "QuickbloxWebRTC"
+PODS_ROOT = ${SRCROOT}/Pods

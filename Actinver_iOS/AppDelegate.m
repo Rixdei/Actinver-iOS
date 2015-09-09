@@ -7,6 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "SVProgressHUD.h"
+#import "InitialViewController.h"
+
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Quickblox/Quickblox.h>
+#import <QuickbloxWebRTC/QuickbloxWebRTC.h>
+
+#define QB_DEFAULT_ICE_SERVERS 0
+
+const CGFloat kQBRingThickness = 1.f;
+const NSTimeInterval kQBAnswerTimeInterval = 60.f;
+const NSTimeInterval kQBRTCDisconnectTimeInterval = 30.f;
+
+//const NSUInteger kQBApplicationID = 92;
+//NSString *const kQBRegisterServiceKey = @"wJHdOcQSxXQGWx5";
+//NSString *const kQBRegisterServiceSecret = @"BTFsj7Rtt27DAmT";
+//NSString *const kQBAccountKey = @"DDe834DsbnaxMe2yczaq";
+
+const NSUInteger kQBApplicationID = 27059;
+NSString *const kQBRegisterServiceKey = @"hZJOOEKYKM-YDFP";
+NSString *const kQBRegisterServiceSecret = @"XkLPm9mM8rW79y7";
+NSString *const kQBAccountKey = @"DDe834DsbnaxMe2yczaq";
 
 @interface AppDelegate ()
 
@@ -17,6 +41,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //Quickblox preferences
+    [QBApplication sharedApplication].applicationId = kQBApplicationID;
+    [QBConnection registerServiceKey:kQBRegisterServiceKey];
+    [QBConnection registerServiceSecret:kQBRegisterServiceSecret];
+    [QBSettings setAccountKey:kQBAccountKey];
+    [QBSettings setLogLevel:QBLogLevelDebug];
+    
+    //QuickbloxWebRTC preferences
+    [QBRTCConfig setAnswerTimeInterval:kQBAnswerTimeInterval];
+    [QBRTCConfig setDisconnectTimeInterval:kQBRTCDisconnectTimeInterval];
+    [QBRTCConfig setDialingTimeInterval:5];
+    
+    //SVProgressHUD preferences
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setRingThickness:kQBRingThickness];
+    
     return YES;
 }
 
@@ -32,6 +75,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    InitialViewController *initialVC = [storyboard instantiateViewControllerWithIdentifier:@"inicio"];
+    [self.window.rootViewController presentViewController:initialVC animated:YES completion:NULL];
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

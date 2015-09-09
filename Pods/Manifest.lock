@@ -1,0 +1,28 @@
+PODS:
+  - MMDrawerController (0.4.0):
+    - MMDrawerController/Core (= 0.4.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.4.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.4.0)
+    - MMDrawerController/Subclass (= 0.4.0)
+  - MMDrawerController+Storyboard (0.0.1):
+    - MMDrawerController (~> 0.4.0)
+  - MMDrawerController/Core (0.4.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.4.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.4.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.4.0):
+    - MMDrawerController/Core
+  - Quickblox-WebRTC (1.0.6)
+
+DEPENDENCIES:
+  - MMDrawerController
+  - MMDrawerController+Storyboard
+  - Quickblox-WebRTC (~> 1.0.6)
+
+SPEC CHECKSUMS:
+  MMDrawerController: 858baca4191ab2ef8dae9521cdde3bebb1ecd536
+  MMDrawerController+Storyboard: 236f08f26760873155b0e7cf5782aa4f1caf17ea
+  Quickblox-WebRTC: 474a5e2e79fa7a9bf48552fd7a7dbd3317ef095a
+
+COCOAPODS: 0.38.2
